@@ -1,0 +1,85 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    padding: 10px;
+}
+main{
+    width: 80%;
+    max-width: 800px;
+    margin: auto;
+}
+
+nav, div, header, article, aside, footer{
+    border: 1px solid #616b65;
+    padding: 10px;
+}
+
+div{
+    background-color: #d4f0d3;
+}
+
+nav ul{
+    display: flex;
+    list-style-type: none;
+    gap: 10px;
+}
+nav ul li{
+    padding: 10px;
+    background-color:  #d4f0d3;
+    flex: 0 0 30%;
+}
+nav ul li:hover a{
+    color: #254224;
+}
+
+/*OLDALALAKÍTÁS*/
+main{
+    display: flex;
+    flex-wrap: wrap;
+}
+header, nav, footer{
+    width:100%;
+}
+article{
+    width: 70%;
+}
+aside{
+    width: 30%;
+}
+
+/*DIVEK ELHEYEZÉSE*/
+article{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+article>div{
+    flex: 0 1 25%;
+}
+article>div:nth-child(1){
+    flex: 0 0 100%;
+}
+form>div{
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (max-width: 600px){
+    nav ul{
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    nav ul li{
+        flex: 0 1 100%;
+    }
+    article, aside{
+        width: 100%;
+    }
+    article>div{
+        flex: 0 1 50%;
+    }
+    
+}
